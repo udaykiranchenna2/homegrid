@@ -1,0 +1,11 @@
+{
+    "id": "botble/home-grid",
+    "name": "Home Grid",
+    "namespace": "Botble\\HomeGrid\\",
+    "provider": "Botble\\HomeGrid\\Providers\\HomeGridServiceProvider",
+    "author": "Your Name",
+    "url": "https://yourwebsite.com",
+    "version": "1.0.0",
+    "description": "A plugin to create customizable home page grids",
+    "minimum_core_version": "7.3.0"
+}

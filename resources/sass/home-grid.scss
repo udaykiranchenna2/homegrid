@@ -1,0 +1,679 @@
+// Common Styles
+.home-grid-wrapper {
+    margin: 50px 0;
+    
+    .home-grid-title {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .home-grid-description {
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Style 1 - Even Grid
+.home-grid-wrapper.style-1 {
+    .grid-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+        
+        .grid-item-content {
+            padding: 30px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .grid-item-image {
+            position: relative;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.5s ease;
+            }
+            
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+        
+        .grid-item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+        
+        .grid-item-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .grid-item-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .grid-item-description {
+            margin-bottom: 20px;
+        }
+        
+        .grid-item-button {
+            margin-top: 15px;
+            
+            .btn {
+                padding: 8px 20px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Style 2 - Masonry Grid
+.home-grid-wrapper.style-2 {
+    .grid-masonry {
+        position: relative;
+        
+        .card {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+            }
+            
+            &.grid-height-1 {
+                min-height: 300px;
+            }
+            
+            &.grid-height-2 {
+                min-height: 400px;
+            }
+            
+            .card-body {
+                position: relative;
+                z-index: 2;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 25px;
+                height: 100%;
+            }
+            
+            .card-icon {
+                color: #0d6efd;
+            }
+            
+            .card-title {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            .card-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+            
+            .card-img-overlay {
+                padding: 0;
+                
+                img {
+                    transition: transform 0.5s ease;
+                }
+                
+                &:hover img {
+                    transform: scale(1.05);
+                }
+            }
+            
+            .grid-item-button {
+                .btn {
+                    padding: 8px 20px;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Style 3 - Gallery Grid
+.home-grid-wrapper.style-3 {
+    .grid-gallery {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 300px;
+        grid-gap: 10px;
+        
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            
+            &.grid-item-1 {
+                grid-column: span 6;
+                grid-row: span 1;
+            }
+            
+            &.grid-item-2 {
+                grid-column: span 3;
+                grid-row: span 1;
+            }
+            
+            &.grid-item-3 {
+                grid-column: span 3;
+                grid-row: span 1;
+            }
+            
+            &.grid-item-4 {
+                grid-column: span 4;
+                grid-row: span 1;
+            }
+            
+            &.grid-item-5 {
+                grid-column: span 4;
+                grid-row: span 1;
+            }
+            
+            &.grid-item-6 {
+                grid-column: span 4;
+                grid-row: span 1;
+            }
+            
+            .grid-content {
+                height: 100%;
+                
+                &:hover img {
+                    transform: scale(1.05);
+                }
+                
+                img {
+                    transition: transform 0.5s ease;
+                }
+            }
+            
+            .grid-info {
+                z-index: 2;
+            }
+            
+            .grid-item-overlay {
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+            
+            .grid-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            .grid-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .grid-icon {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Style 4 - Full Page Grid
+.home-grid-wrapper.style-4 {
+    .fullpage-grid {
+        margin: 0;
+        height: 100vh;
+        min-height: 800px;
+        max-height: 1000px;
+        
+        .row {
+            height: 100%;
+        }
+        
+        .col-md-4 {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .grid-item {
+            overflow: hidden;
+            position: relative;
+            
+            &.full-height {
+                height: 100%;
+            }
+            
+            &.half-height {
+                height: 50%;
+            }
+            
+            &.small-height {
+                height: 35%;
+            }
+            
+            &.large-height {
+                height: 65%;
+            }
+            
+            .grid-content {
+                height: 100%;
+                width: 100%;
+                
+                &:hover img {
+                    transform: scale(1.05);
+                }
+                
+                img {
+                    transition: transform 0.5s ease;
+                }
+            }
+            
+            .grid-info {
+                z-index: 2;
+                max-width: 90%;
+            }
+            
+            .grid-item-overlay {
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+            
+            .grid-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            .grid-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .grid-desc {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments for Style 4
+@media (max-width: 991px) {
+    .home-grid-wrapper.style-4 {
+        .fullpage-grid {
+            height: auto;
+            max-height: none;
+            
+            .col-md-4 {
+                height: auto;
+            }
+            
+            .grid-item {
+                &.full-height,
+                &.half-height,
+                &.small-height,
+                &.large-height {
+                    height: 300px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+// Style 4 - Full Page Grid
+.home-grid-wrapper.style-4 {
+    .fullpage-grid {
+        margin: 0;
+        height: 100vh;
+        min-height: 800px;
+        max-height: 1000px;
+        
+        .row {
+            height: 100%;
+        }
+        
+        .col-md-4 {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .grid-item {
+            overflow: hidden;
+            position: relative;
+            
+            &.full-height {
+                height: 100%;
+            }
+            
+            &.half-height {
+                height: 50%;
+            }
+            
+            &.small-height {
+                height: 35%;
+            }
+            
+            &.large-height {
+                height: 65%;
+            }
+            
+            .grid-content {
+                height: 100%;
+                width: 100%;
+                
+                &:hover img {
+                    transform: scale(1.05);
+                }
+                
+                img {
+                    transition: transform 0.5s ease;
+                }
+            }
+            
+            .grid-info {
+                z-index: 2;
+                max-width: 90%;
+            }
+            
+            .grid-item-overlay {
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+            
+            .grid-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            .grid-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .grid-desc {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Style 5 - Five Grid Layout
+.home-grid-wrapper.style-5 {
+    padding: 60px 0;
+    
+    .five-grid-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 20px;
+        height: 800px;
+        max-width: 1400px;
+        margin: 0 auto;
+        
+        .grid-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+                
+                .grid-item-overlay {
+                    opacity: 1;
+                }
+                
+                .grid-item-image img {
+                    transform: scale(1.1);
+                }
+            }
+            
+            &.grid-position-1 {
+                grid-column: 1 / 8;
+                grid-row: 1 / 6;
+                
+                .grid-item-title {
+                    font-size: 2rem;
+                }
+            }
+            
+            &.grid-position-2 {
+                grid-column: 8 / 13;
+                grid-row: 1 / 4;
+                
+                .grid-item-title {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            &.grid-position-3 {
+                grid-column: 8 / 13;
+                grid-row: 4 / 6;
+                
+                .grid-item-title {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            &.grid-position-4 {
+                grid-column: 1 / 5;
+                grid-row: 6 / 9;
+                
+                .grid-item-title {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            &.grid-position-5 {
+                grid-column: 5 / 13;
+                grid-row: 6 / 9;
+                
+                .grid-item-title {
+                    font-size: 1.8rem;
+                }
+            }
+            
+            .grid-item-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            .grid-item-image {
+                width: 100%;
+                height: 100%;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s ease;
+                }
+                
+                .image-link {
+                    display: block;
+                    height: 100%;
+                }
+            }
+            
+            .grid-item-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 30px;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                color: white;
+            }
+            
+            .grid-item-content {
+                max-width: 90%;
+            }
+            
+            .grid-item-icon {
+                font-size: 2rem;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+            
+            .grid-item-title {
+                margin-bottom: 10px;
+                font-weight: 700;
+                color: white;
+                line-height: 1.2;
+            }
+            
+            .grid-item-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+            .grid-item-description {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                color: rgba(255, 255, 255, 0.7);
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            
+            .grid-item-button {
+                margin-top: auto;
+                
+                .btn {
+                    padding: 8px 20px;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                    
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments for Style 4
+@media (max-width: 991px) {
+    .home-grid-wrapper.style-4 {
+        .fullpage-grid {
+            height: auto;
+            max-height: none;
+            
+            .col-md-4 {
+                height: auto;
+            }
+            
+            .grid-item {
+                &.full-height,
+                &.half-height,
+                &.small-height,
+                &.large-height {
+                    height: 300px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    
+    // Responsive adjustments for Style 5
+    .home-grid-wrapper.style-5 {
+        .five-grid-container {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+            .grid-item {
+                min-height: 320px;
+                
+                &.grid-position-1,
+                &.grid-position-2,
+                &.grid-position-3,
+                &.grid-position-4,
+                &.grid-position-5 {
+                    grid-column: auto;
+                    grid-row: auto;
+                }
+                
+                .grid-item-overlay {
+                    opacity: 1;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+                }
+            }
+        }
+    }
+}
+
+
